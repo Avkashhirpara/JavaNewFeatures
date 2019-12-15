@@ -1,7 +1,6 @@
 package com.java8.lambda;
 
 import com.practice.domain.Student;
-
 import java.util.function.Predicate;
 
 public class PredicateDemo {
