@@ -60,6 +60,7 @@ public class Student {
         studentList.add(new Student(7,"Monica",21,"234, Park road, Northboro"));
         studentList.add(new Student(8,"Julia",21,"B450, Train street, Boston"));
         studentList.add(new Student(9,"Mary",20,"7,Roger Avenue,26 Street"));
+        studentList.add(new Student(9,"Mary",20,"7,Roger Avenue,26 Street"));
         return studentList;
     }
 

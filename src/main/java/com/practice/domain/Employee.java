@@ -2,6 +2,7 @@ package com.practice.domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Employee {
     private int id;
@@ -63,4 +64,29 @@ public class Employee {
         return employeeList;
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id=" + id +
+                ", salary=" + salary +
+                ", name='" + name + '\'' +
+                ", roll='" + roll + '\'' +
+                "} \n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id &&
+                Double.compare(employee.salary, salary) == 0 &&
+                name.equals(employee.name) &&
+                roll.equals(employee.roll);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, salary, name, roll);
+    }
 }
