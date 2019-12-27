@@ -57,7 +57,7 @@ public class Employee {
         employeeList.add(new Employee(4,"Morgan",50000,"MANAGER"));
         employeeList.add(new Employee(5,"Steve",90000,"TL"));
         employeeList.add(new Employee(6,"Bella",60000,"DEV"));
-        employeeList.add(new Employee(7,"Monica",12000,"DEV"));
+        employeeList.add(new Employee(7,"Monica",55000,"DEV"));
         employeeList.add(new Employee(8,"Julia",15000,"QA"));
         employeeList.add(new Employee(9,"Mary",46000,"MANAGER"));
         return employeeList;
