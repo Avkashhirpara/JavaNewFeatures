@@ -1,12 +1,12 @@
-package com.mics;
+package com.thread;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
 public class WorkerDemo {
-    private Object lock1 = new Object();
-    private Object lock2 = new Object();
+    private final Object lock1 = new Object();
+    private final Object lock2 = new Object();
 
     private List<Integer> list1 = new ArrayList<>();
     private List<Integer> list2 = new ArrayList<>();
@@ -44,18 +44,8 @@ public class WorkerDemo {
     public void main(){
         System.out.println("Starting.....");
         long start = System.currentTimeMillis();
-        Thread t = new Thread(new Runnable(){
-            @Override
-            public void run() {
-                executeAll();
-            }
-        });
-        Thread t2 = new Thread(new Runnable(){
-            @Override
-            public void run() {
-                executeAll();
-            }
-        });
+        Thread t = new Thread(() -> executeAll());
+        Thread t2 = new Thread(this::executeAll);
         t.start();
         t2.start();
 
